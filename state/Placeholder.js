@@ -218,7 +218,7 @@ export default function PlayGame() {
 
             if (preloaded) {
                 // Add a delay for demonstration purposes
-                setTimeout(function () { initialized = true; }, 1000);
+                setTimeout(function () { initialized = true; }, 100);
             }
         } else {
             // Update and render the game
@@ -770,12 +770,8 @@ export default function PlayGame() {
         // Draw title
         context.fillStyle = "#ffffff";
         context.font = "24px Verdana";
-        context.fillText("Bubble Shooter Example - Rembound.com", 10, 37);
+        context.fillText("Bubble Shooter Game", 10, 37);
 
-        // Display fps
-        context.fillStyle = "#ffffff";
-        context.font = "12px Verdana";
-        context.fillText("Fps: " + fps, 13, 57);
     }
 
     // Render tiles

@@ -7,12 +7,10 @@ import Videos from '../assets/videos/Videos';
 import { RootStackScreenProps } from '../types';
 
 export default function LearningScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
-    const [wordIndex, setWordIndex] = useState(0);
-
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Practice Words</Text>
-            <VideoCarousel videos={Videos.levels[0]} signs={Object.keys(Videos.levels[0])}/>
+            <VideoCarousel videos={Videos.levels[0]} signs={Object.keys(Videos.levels[0])} />
         </View>
     );
 }

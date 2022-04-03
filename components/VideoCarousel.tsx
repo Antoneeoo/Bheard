@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AVPlaybackSource } from 'expo-av/build/AV.types';
+import { StyleSheet } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import { View } from './Themed';
 import VideoPlayer from './VideoPlayer';
@@ -36,11 +37,11 @@ const VideoCarousel: React.FunctionComponent<VideoCarouselProps> = ({
 
     return (
         <View>
-            <div>
+            <View style={styles.video}>
                 <Button title='Previous' onPress={onPrevious}></Button>
                 <VideoPlayer videoResource={currentVideo} />
                 <Button title='Next' onPress={onNext}></Button>
-            </div>
+            </View>
 
             <Text style={{
                 'color': 'white',
@@ -50,5 +51,11 @@ const VideoCarousel: React.FunctionComponent<VideoCarouselProps> = ({
         </View >
     );
 }
+
+const styles = StyleSheet.create({
+    video: {
+        display: 'flex'
+    }
+});
 
 export default VideoCarousel;
