@@ -1,5 +1,7 @@
 # PopSign Generation
 
+A mobile game to teach hearing parents of deaf children sign language.
+
 - Original blog post tutorial for an HTML5 bubble shooter [can be found here](https://rembound.com/articles/bubble-shooter-game-tutorial-with-html5-and-javascript)
 - Repository for the above [is located here](https://github.com/rembound/Bubble-Shooter-HTML5)
 - Once you're up and running, visit [this React Native tutorial](https://reactnative.dev/docs/tutorial) for more information on building mobile apps with React.
@@ -19,13 +21,6 @@
 - `yarn ios` -- (`expo run:ios`) Build the iOS App (requires a MacOS computer).
 - `yarn android` -- (`expo run:android`) Build the Android App.
 - `yarn web` -- (`expo start:web`) Run the website in your browser.
-
-## Sections
-
-- [Usage with Expo Client App](#usage-with-expo-client-app)
-- [Support and Contact](#support-and-contact)
-- [FAQs](#faqs)
-- [Contributing](#contributing)
 
 ## Usage with Expo Client App
 

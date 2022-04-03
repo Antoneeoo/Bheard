@@ -1,5 +1,6 @@
 {
     "name": "popsign-generation",
+    "description": "A mobile game to teach hearing parents of deaf children sign language.",
     "version": "1.0.0",
     "main": "node_modules/expo/AppEntry.js",
     "scripts": {
