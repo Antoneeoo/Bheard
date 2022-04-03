@@ -1,14 +1,19 @@
+import { useEffect } from 'react';
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import { View } from '../components/Themed';
+import PlayGame  from '../hooks/Placeholder';
+import { RootTabScreenProps } from '../types';
 
-export default function TabTwoScreen() {
+export default function Gameplay({ navigation }: RootTabScreenProps<'Gameplay'>) {
+
+  useEffect(() => {
+    PlayGame();  
+  }, [])
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+        <canvas id="viewport" width="628" height="628"></canvas>
     </View>
   );
 }
