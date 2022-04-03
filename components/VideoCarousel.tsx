@@ -18,8 +18,15 @@ const VideoCarousel: React.FunctionComponent<VideoCarouselProps> = ({
     const [currentVideo, setCurrentVideo] = useState(videos[signs[videoIndex]])
 
     const onPrevious = () => {
-        setVideoIndex(videoIndex - 1)
-        setCurrentVideo(videos[signs[videoIndex - 1]])
+        let nextIndex;
+        if (videoIndex == 0) {
+            nextIndex = 4
+        } else {
+            nextIndex = videoIndex - 1
+        }
+
+        setVideoIndex(nextIndex)
+        setCurrentVideo(videos[signs[nextIndex]])
     }
 
     const onNext = () => {
