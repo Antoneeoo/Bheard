@@ -1,10 +1,28 @@
+import { useRef, useState } from 'react';
 import * as WebBrowser from 'expo-web-browser';
 import { View } from './Themed';
+import { Video, AVPlaybackStatus } from 'expo-av';
+import { AVPlaybackSource } from 'expo-av/build/AV.types';
 
-const VideoPlayer: React.FunctionComponent = () => {
+interface VideoProps {
+    videoResource: AVPlaybackSource
+}
+
+const VideoPlayer: React.FunctionComponent<VideoProps> = ({
+    videoResource
+}) => {
+    const video = useRef(null);
+    const [status, setStatus] = useState({});
     return (
         <View>
-            TODO
+            <Video
+                ref={video}
+                source={videoResource}
+                resizeMode="contain"
+                isLooping
+                onPlaybackStatusUpdate={status => setStatus(() => status)}
+                shouldPlay
+            />
         </View>
     );
 }

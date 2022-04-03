@@ -18,6 +18,7 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import LearningScreen from '../screens/LearningScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -85,11 +86,19 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
+        name="Learning"
+        component={LearningScreen}
+        options={{
+          title: 'Practice Signing',
+          tabBarIcon: ({ color }) => <TabBarIcon name="hand-paper-o" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
         name="Gameplay"
         component={Gameplay}
         options={{
           title: 'Gameplay',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="gamepad" color={color} />,
         }}
       />
     </BottomTab.Navigator>

@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 import VideoCarousel from '../components/VideoCarousel';
+import Videos from '../assets/videos/Videos';
 import { RootStackScreenProps } from '../types';
 
 export default function LearningScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
@@ -11,7 +12,7 @@ export default function LearningScreen({ navigation }: RootStackScreenProps<'Not
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Practice Words</Text>
-            <VideoCarousel />
+            <VideoCarousel videos={Videos.levels[0]} signs={Object.keys(Videos.levels[0])}/>
         </View>
     );
 }
