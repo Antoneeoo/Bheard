@@ -1,6 +1,5 @@
 
 export default {
-    test: require('./bubble-sprites.png'),
     balls: [
         require('./balls/ball_blue.png'),
         require('./balls/ball_green.png'),

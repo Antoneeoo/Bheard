@@ -1,9 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import useCachedResources from './hooks/useCachedResources';
-import useColorScheme from './hooks/useColorScheme';
+import useCachedResources from './state/useCachedResources';
+import useColorScheme from './state/useColorScheme';
 import Navigation from './navigation';
 
 export default function App() {
