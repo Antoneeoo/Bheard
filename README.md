@@ -1,6 +1,6 @@
 # PopSign Generation
 
-A mobile game to teach hearing parents of deaf children sign language.
+A mobile application to teach and ease communication between hearing persons and heard of hearing persons with sign language.
 
 - Original blog post tutorial for an HTML5 bubble shooter [can be found here](https://rembound.com/articles/bubble-shooter-game-tutorial-with-html5-and-javascript)
 - Repository for the above [is located here](https://github.com/rembound/Bubble-Shooter-HTML5)
