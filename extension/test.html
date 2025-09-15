@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Test Page</title>
+</head>
+<body>
+  <h1>Video Test Page</h1>
+  <p>This page is for testing the video stream interception of the Sign Language Translator extension.</p>
+  <video id="webcam" width="640" height="480" autoplay playsinline></video>
+
+  <script>
+    const video = document.getElementById('webcam');
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        video.srcObject = stream;
+      })
+      .catch(err => {
+        console.error("Error accessing webcam:", err);
+      });
+  </script>
+</body>
+</html>

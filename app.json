@@ -4,7 +4,7 @@
         "slug": "popsign-generation",
         "owner": "accessible-technology-in-sign",
         "version": "1.0.0",
-        "orientation": "portrait", : "landscape"
+        "orientation": "portrait",
         "icon": "./assets/images/icon.png",
         "scheme": "myapp",
         "userInterfaceStyle": "automatic",
@@ -22,7 +22,6 @@
         ],
         "ios": {
             "supportsTablet": true
-        
         },
         "android": {
             "adaptiveIcon": {
@@ -35,6 +34,3 @@
         }
     }
 }
-:{}<Button title="New Feature" onPress={() => alert("Feature coming soon!")} />
-import React from 'react';
-
