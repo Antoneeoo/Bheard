@@ -19,6 +19,7 @@ import WelcomeScreen from '../screens/WelcomeScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import LearningScreen from '../screens/LearningScreen';
+import TranslateScreen from '../screens/TranslateScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -59,10 +60,18 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Gameplay"
+      initialRouteName="Translate"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
+      <BottomTab.Screen
+        name="Translate"
+        component={TranslateScreen}
+        options={{
+          title: 'Translate',
+          tabBarIcon: ({ color }) => <TabBarIcon name="camera" color={color} />,
+        }}
+      />
       <BottomTab.Screen
         name='Welcome'
         component={WelcomeScreen}
